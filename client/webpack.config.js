@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const WebpackPwaManifest = require("webpack-pwa-manifest");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const { InjectManifest } = require("workbox-webpack-plugin");
 
@@ -23,7 +22,6 @@ module.exports = () => {
         template: "./index.html",
         title: "Webpack Plugin",
       }),
-      new MiniCssExtractPlugin(),
       new WebpackPwaManifest({
         // TODO: Create a manifest.json:
         name: "PWA Text Editor",
